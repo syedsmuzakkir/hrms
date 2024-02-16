@@ -3,6 +3,9 @@ import { Table } from "antd";
 import React from "react";
 
 import Link from "next/link";
+import Image from "next/image";
+
+import Plus from '../../public/assets/homeicons/Union.svg'
 
 const page = () => {
   const columns = [
@@ -124,7 +127,7 @@ const page = () => {
       <div className="flex justify-between p-4">
         <h2>Employees</h2>
         <Link href={"/employees/addemp"}>
-          <button> Add New Employees </button>
+          <button className="bg-[#1890FF] text-white flex p-4 gap-3 justify-center items-center"> <Image src={Plus} />  Add New Employees </button>
         </Link>
       </div>
       <Table columns={columns} dataSource={data} onChange={onChange} />

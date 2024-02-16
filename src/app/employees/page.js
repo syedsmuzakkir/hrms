@@ -1,6 +1,7 @@
 "use client";
-import { Table } from "antd";
+
 import React from "react";
+import { Table } from "antd";
 
 import Link from "next/link";
 
@@ -115,12 +116,7 @@ const page = () => {
   };
 
   return (
-    <div className="ml-3">
-      {/* <header className='text-black w-full flex justify-center items-start'>
-        Dashboard
-       </header> */}
-      <div className="w-full h-16">Dashboard</div>
-
+    <div>
       <div className="flex justify-between p-4">
         <h2>Employees</h2>
         <Link href={"/employees/addemp"}>

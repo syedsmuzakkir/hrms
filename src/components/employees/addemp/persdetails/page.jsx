@@ -82,27 +82,29 @@ const PersonalInformation = () => {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent:"center", alignItems:"center" ,gap:"100px"}}>
+    <div className="flex items-start justify-start w-full gap-9 px-9 py-6">
       {/* "Choose an image" section */}
-      <div className="image-upload-container">
-        <div style={{border:"2px dashed gray ", padding:"12px", height:"20vh"}}>
-          <label htmlFor="image-upload-input" className="image-upload-label">
+      <div className="image-upload-container flex justify-center items-center ">
+        <div className="flex flex-col justify-center items-center" style={{border:"2px dashed gray ", padding:"12px", }}>
+          <label  htmlFor="image-upload-input" className="image-upload-label text-center">
             {image ? image.name : "Choose an image"}
           </label>
-          <div style={{ cursor: "pointer" }}>
+          <div className="flex justify-center items-center  " htmlFor="image-upload-input" style={{ cursor: "pointer" }}>
             {image ? (
               <img
+              
                 src={URL.createObjectURL(image)}
                 alt="upload image"
-                className="img-display-after" style={{width:"100px",height:"100px"}}
+                className="img-display-after image-upload-label" style={{width:"100px",height:"100px"}}
               />
+            
             ) : (
-              <div>
+              <div className="flex justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={60}
                   height={60}
-                  style={{marginRight:"16px", justifyContent:"center", width:"40px", height:"40px"}}
+                  style={{ justifyContent:"center", width:"40px", height:"40px"}}
                   viewBox="0 0 512 512"
                 >
                   <path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" />
@@ -121,16 +123,17 @@ const PersonalInformation = () => {
       </div>
       
       {/* Form */}
-      <Form
+      <Form 
+      className="w-full"
         name="basic"
         labelCol={{
-          span: 10,
+          // span: 10,
         }}
         wrapperCol={{
-          span: 18,
+          // span: 18,
         }}
         style={{
-          maxWidth: 900,
+          
         }}
         initialValues={{
           remember: true,
@@ -139,7 +142,9 @@ const PersonalInformation = () => {
         onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
-        <Row gutter={0}>
+        <Row 
+         className="w-full "
+        gutter={0}>
           <Col span={12}>
             <Form.Item
               label="First Name"
@@ -175,7 +180,7 @@ const PersonalInformation = () => {
           <Form.Item
             label="Email Address"
             name="Email Address"
-            style={{width:600}}
+            // style={{width:600}}
             rules={[
               {
                 required: true,
@@ -219,12 +224,12 @@ const PersonalInformation = () => {
       <Input />
     </Form.Item>
   </Col>
-  <Col span={7}>
-    <Form.Item label="Gender" name="Gender" style={{ marginBottom: 0 }}>
-      <Radio.Group style={{ display: 'flex', flexDirection: 'row' }}>
-        <Radio.Button value="small">Male</Radio.Button>
-        <Radio.Button value="default">Female</Radio.Button>
-        <Radio.Button value="large">Other</Radio.Button>
+  <Col  className="w-1/2 gap-4">
+    <Form.Item label="Gender" name="Gender" style={{ marginBottom: 0,  marginLeft:'5px'}}>
+      <Radio.Group style={{ display: 'flex', flexDirection: 'row' }} className="justify-center gap-4" >
+        <Radio.Button className="w-full" value="small">Male</Radio.Button>
+        <Radio.Button className="w-full" value="default">Female</Radio.Button>
+        <Radio.Button className="w-full" value="large">Other</Radio.Button>
       </Radio.Group>
     </Form.Item>
   </Col>
@@ -378,7 +383,7 @@ const PersonalInformation = () => {
 
         <Form.Item
           wrapperCol={{
-            offset: 2,
+            // offset: 2,
           }}
         >
           <Button onClick={()=>{

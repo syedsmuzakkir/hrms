@@ -34,8 +34,8 @@ const ProfessionalInfo = () => {
   return (
 
 <Form
-  style={{ padding: "30px", border: "2px solid #eee" }}
-  className='m-40 w-[80%] '
+  style={{padding:'20px',  margin: "auto", border: "2px solid #eee" }}
+  className=' justify-center items-center w-[80%] '
   onFinish={handleSubmit}
    // Adjust the span value based on your layout
  // Adjust the span value based on your layout

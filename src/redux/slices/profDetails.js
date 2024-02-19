@@ -25,3 +25,4 @@ export const { updateProfessionalDetails, setDropdownOption } = slice.actions;
 export const selectProfessionalDetails = (state) => state.professionalDetails;
 
 export default slice.reducer;
+

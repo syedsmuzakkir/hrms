@@ -7,6 +7,12 @@ import Image from "next/image";
 
 import Plus from '../../public/assets/homeicons/Union.svg'
 
+import AccountImg from '../../public/assets/homeicons/EmployeesImg/AccountImg.svg'
+import Person from '../../public/assets/homeicons/EmployeesImg/Account.svg'
+import Circle from '../../public/assets/homeicons/EmployeesImg/circle.svg'
+
+
+
 const page = () => {
   const columns = [
     {
@@ -57,6 +63,7 @@ const page = () => {
   const data = [
     {
       key: "1",
+      img: "",
       name: "John Brown",
       empId: "email@gmail.com",
       email: 60,
@@ -118,11 +125,45 @@ const page = () => {
   };
 
   return (
-    <div className="ml-3">
+    <div className="">
       {/* <header className='text-black w-full flex justify-center items-start'>
         Dashboard
        </header> */}
-      <div className="w-full h-16">Dashboard</div>
+      <div className="w-full  px-4 py-3 bg-[#E6F7FF] pb-5 ">
+
+      <h2>Dashboard</h2>
+      
+
+ <div className="flex gap-4 justify-center items-center">
+
+ <div className="flex w-full py-6">
+        <Image src={AccountImg} className="" />
+        <div className=" flex flex-col pl-4">
+        <h1 className="text-2xl" > Welcome Ajay!  </h1>
+        <h1 className="text-2xl" >Have a nice day!</h1>
+
+        </div>
+        
+
+      </div>
+
+      <div className="flex w-full bg-white p-6 gap-4 border rounded-xl ">
+        <Image src={Person} />
+        <div>
+          <h2>Total Employees</h2>
+          <h3 className="text-2xl">82</h3>
+        </div>
+      </div>
+
+      <div className="flex w-full bg-white p-6 gap-4  border rounded-2xl ">
+        <Image src={Circle} />
+        <div>
+          <h2>Total Projects</h2>
+          <h3 className="text-2xl">07</h3>
+        </div>
+      </div>
+      </div>
+      </div>
 
       <div className="flex justify-between p-4">
         <h2>Employees</h2>

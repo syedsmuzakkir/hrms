@@ -16,12 +16,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { relative } from "path";
 
-// import 
+ 
 
 import { Provider } from "react-redux";
 import {store} from "@/redux/store/store"
-// import { Store } from "@reduxjs/toolkit";
-// import store
+
 import { AudioOutlined } from "@ant-design/icons";
 import { Input, Space } from "antd";
 const { Search } = Input;
@@ -202,7 +201,7 @@ export default function RootLayout({ children }) {
 
                 // display:"flex",
                 // flexDirection:"column"
-                padding: 10,
+                paddingLeft: 10,
               }}
             >
               <div
@@ -215,6 +214,7 @@ export default function RootLayout({ children }) {
                   // top:"2%",
                   // width:"85%"
                   marginLeft: 200,
+                  // padding:'10px',
                 }}
               >
                 {children}
